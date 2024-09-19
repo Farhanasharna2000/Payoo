@@ -2,6 +2,8 @@ document.getElementById("btn-add-money")
 .addEventListener('click',function(event){
 event.preventDefault();
 const inputAddMoney = document.getElementById("input-add-money").value;
+const addMoneyNumber = parseFloat(inputAddMoney);
+
 const inputPinNumber = document.getElementById("input-pin-number").value;
 // console.log(inputAddMoney,inputPinNumber);
 console.log(typeof inputPinNumber);
@@ -16,7 +18,6 @@ if (inputPinNumber === '1234') {
 
         // convert to number :
 
-        const addMoneyNumber = parseFloat(inputAddMoney);
         const balanceNumber = parseFloat(balance);
         console.log(typeof addMoneyNumber,typeof balanceNumber);
         const newBalance = addMoneyNumber + balanceNumber;

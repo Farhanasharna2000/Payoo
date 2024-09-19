@@ -2,6 +2,8 @@ document.getElementById("btn-cash-out")
 .addEventListener('click',function(event){
 event.preventDefault();
 const inputCashOut = document.getElementById("input-cash-out").value;
+const cashOutNumber = parseFloat(inputCashOut);
+
 const inputCashOutPinNumber = document.getElementById("input-cash-out-pin-number").value;
 // console.log(inputCashOut,inputCashOutPinNumber);
 console.log(typeof inputCashOutPinNumber);
@@ -16,7 +18,6 @@ if (inputCashOutPinNumber === '1234') {
 
         // convert to number :
 
-        const cashOutNumber = parseFloat(inputCashOut);
         const balanceNumber = parseFloat(balance);
         console.log(typeof cashOutNumber,typeof balanceNumber);
         const newBalance =  balanceNumber - cashOutNumber;
